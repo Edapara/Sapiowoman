@@ -1,0 +1,1 @@
+daily session sfdx project --> local repo --> publish it to Remote(github)
