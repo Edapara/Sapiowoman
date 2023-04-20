@@ -1,0 +1,1 @@
+List<Account> sunDay = new List<Account> [SELECT AccountId, FirstName, LastName, Email FROM Contact];
