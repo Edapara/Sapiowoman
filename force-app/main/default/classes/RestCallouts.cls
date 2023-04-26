@@ -17,7 +17,7 @@ public with sharing class RestCallouts {
         return response;
     }
     // Http Method: GET
-    public static HttpResponse getAirlineDetails(){
+    public static HttpResponse getAirlines(){
         // 1. Prepare HttpRequest and wrap all the necessary data in it
         HttpRequest request = new HttpRequest();
         request.setEndpoint('https://api.instantwebtools.net/v1/airlines/1');
@@ -37,11 +37,11 @@ public with sharing class RestCallouts {
             airline.Name = string.valueOf(wrapper.id);
             airline.Name__c = wrapper.name;
             airline.Country__c = wrapper.country;
-            airline.Logo_URL__c = wrapper.logo;
+            airline.LogoURL__c = wrapper.logo;
             airline.Slogan__c = wrapper.slogan;
-            airline.Head_Quaters__c = wrapper.head_quaters;
+            airline.HeadQuarters__c = wrapper.head_quaters;
             airline.Website__c = wrapper.website;
-            airline.Established__c = wrapper.established;
+            airline.Establish__c = wrapper.established;
             // create airlines record
             // Endpoint: https://api.instantwebtools.net/v1/airlines/1
             try{
@@ -64,7 +64,7 @@ public with sharing class RestCallouts {
     //
     // Endpoint: https://api.onlinewebtutorblog.com/employees
     // Http Method: GET
-    public static HttpResponse getEmployees(){
+    /*public static HttpResponse getEmployees(){
         // 1. Prepare HttpRequest and wrap all the necessary data in it
         HttpRequest request = new HttpRequest();
         request.setEndpoint('https://api.onlinewebtutorblog.com/employees');
@@ -209,11 +209,9 @@ public with sharing class RestCallouts {
             system.debug(response.getBody());
         }
     }
+}*/
 
-    
 }
-
-
 
 
 
